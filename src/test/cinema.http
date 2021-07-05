@@ -12,3 +12,64 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:8080/api/cinema
+Content-Type: application/json
+
+{
+  "title": "A",
+  "date" : [2021,6,30,12,30],
+  "maxReservation": 12
+}
+
+###
+POST http://localhost:8080/api/cinema
+Content-Type: application/json
+
+{
+  "title": "A",
+  "date" : [2021,6,30,12,30],
+  "maxReservation": 120
+}
+
+###
+POST http://localhost:8080/api/cinema
+Content-Type: application/json
+
+{
+  "title": "B",
+  "date" : [2021,6,30,12,30],
+  "maxReservation": 120
+}
+
+###
+GET http://localhost:8080/api/cinema/1
+Accept: application/json
+
+###
+GET http://localhost:8080/api/cinema/3
+Accept: application/json
+
+###
+DELETE http://localhost:8080/api/cinema
+
+###
+PUT http://localhost:8080/api/cinema/1
+Content-Type: application/json
+
+{
+  "date" : [2022,6,30,12,30]
+}
+
+###
+POST http://localhost:8080/api/cinema/1/reserve
+Content-Type: application/json
+
+{
+  "numberOfReservation" : 100
+}
+
+###
+GET http://localhost:8080/api/cinema/?title=A
+Accept: application/json
+
+
